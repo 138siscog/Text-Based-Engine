@@ -12,15 +12,18 @@ def draw_map(grid):
         print(" ".join(row))
 
 # movement
-
-def player_movement(action):
-        if action != action_list:
-            print("Action not recognized")
-        elif action == "west":
-            player_posx -= 1
-        elif action == "east":
-            player_posx += 1
-        elif action == "north":
-            player_pos -= 1
-        elif action == "south":
-            player_pos += 1
+def player_movement(action,x,y,grid):
+    old_x, old_y = x, y
+    if action not in action_list:
+        print("not Found")
+    elif action == "west":
+        x -= 1
+    elif action == "east":
+        x += 1
+    elif action == "north":
+        y -= 1
+    elif action == "south":
+        y += 1
+    grid[old_y][old_x] = "."
+    grid[y][x] = "@"
+    return x,y
