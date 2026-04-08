@@ -23,3 +23,8 @@
 # weapon / shield stats update (probablity of landing a hit increases / decreases)
 # boss fights
 
+####################################################################################################
+
+Update 2. 04/07/2026
+
+## boundary of player now works, if you try to go outside of boundary you will get a (you can't go that way) message instead of the code breaking
