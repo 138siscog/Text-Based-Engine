@@ -11,9 +11,6 @@ def draw_map(grid):
     for row in grid:
         print(" ".join(row))
 
-# boundary check
-
-
 # movement
 def player_movement(action,x,y,grid):
     if action not in action_list:
@@ -30,13 +27,15 @@ def player_movement(action,x,y,grid):
     elif action == "south":
         new_y += 1
     
-    # Check bounds
+    # Check bounds + walls
     height = len(grid)
     width = len(grid[0]) if height > 0 else 0
-    if 0 <= new_x < width and 0 <= new_y < height:
+    if 0 <= new_x < width and 0 <= new_y < height and grid[new_y][new_x] != "x":
         grid[y][x] = "."
+        
         grid[new_y][new_x] = "@"
         return new_x, new_y
     else:
         print("You cannot go that way")
         return x, y
+    

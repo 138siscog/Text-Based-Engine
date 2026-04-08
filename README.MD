@@ -27,4 +27,6 @@
 
 Update 2. 04/07/2026
 
-## boundary of player now works, if you try to go outside of boundary you will get a (you can't go that way) message instead of the code breaking
+## boundary of player now works, if you try to go outside of boundary you will get a (you can't go that way) message instead of the code 
+
+## you are now able to set wall coordinates using "x" to mark the walls you will not be able to move through them, currently the walls are hard coded into the main.py 

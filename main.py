@@ -21,15 +21,24 @@ y = 4
 player_posx = [x]
 player_posy = [y]
 grid[y][x] = "@"
+grid[2][0] = "x"
+grid[2][1] = "x"
+grid[2][3] = "x"
+grid[2][4] = "x"
+grid[1][1] = "x"
+grid[1][3] = "x"
+grid[2][3] = "x"
+grid[3][1] = "x"
+grid[3][3] = "x"
+
 draw_map(grid)
+
 
 running = True
 while True:
-    action = input("What would you like to do?").lower().strip()
+    action = input("What would you like to do?\n").lower().strip()
     clear_screen()
     x,y = player_movement(action,x,y,grid)
     draw_map(grid)
-
- 
 
 
